@@ -1,0 +1,463 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*Animation Slide*/
+@mixin Slide($direction, $duree){
+    animation-duration: $duree;
+    animation-name: $direction;
+
+    @keyframes slide-right {
+        from {transform: translateX(-200%);}
+        50% {transform: translateX(-200%);}
+        to {transform: translateX(0);}
+    }
+
+    @keyframes slide-left {
+        from {transform: translateX(1000px);}
+        50% {transform: translateX(900px);}
+        to {transform: translateX(000px);}
+    }
+
+    @keyframes slide-top {
+        from {transform: translateY(3000px);}
+        50% {transform: translateY(3000px);}
+        to {transform: translateY(0);}
+    }
+
+    @keyframes slide-z {
+        from {transform: translatez(3000px);}
+        50% {transform: translatez(3000px);}
+        to {transform: translatez(0);}
+    }
+}
+
+
+/*Animation Souris*/
+@mixin slide-bottom-mouse($height) {
+    @keyframes slide-bottom-mouse {
+        0% { 
+            top: 0;
+            opacity: 1;
+        }
+        
+        25% {
+            top: $height;
+            opacity: 1;
+        }
+
+        50% {
+            top: $height;
+            opacity: 0;
+        }
+
+        75% {
+            top: $height;
+            opacity: 0;
+        }
+
+        100% {
+            top: 0;
+            opacity: 0;
+        }
+    }
+}
+
+
+/*Animation opacity*/
+@mixin opac{
+
+
+    @keyframes opac {
+        0% {opacity:0;}
+        10% {opacity:0;}
+        20% {opacity:0;}
+        30% {opacity:0;}
+        40% {opacity:0;}
+        50% {opacity:0;}
+        60% {opacity:0;}
+        70% {opacity:0;}
+        80% {opacity:0;}
+        90% {opacity: 0;}
+        99% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+}
+
+
+
+
+/*Animation opacity-douce*/
+@mixin opac-douce{
+
+
+    @keyframes opac-douce {
+        0% {opacity:0;}
+        10% {opacity:0;}
+        20% {opacity:0;}
+        30% {opacity:0;}
+        40% {opacity:0;}
+        50% {opacity:0;}
+        60% {opacity:0;}
+        70% {opacity:0;}
+        80% {opacity:0.8;}
+        90% {opacity: 0.89;}
+        99% {opacity: 0.95;}
+        100% {opacity: 1;}
+    }
+}
+
+
+
+/*Animation opacity-douce-2*/
+@mixin opac-douce-2{
+
+
+    @keyframes opac-douce-2 {
+        0% {opacity:0;}
+
+        100% {opacity: 1;}
+    }
+}
+
+
+
+/*Animations au scroll*/
+/*Animation apparition par le bas*/
+@mixin apparition($duree) {
+    .reveal {
+        position: relative;
+        opacity: 0;
+    }
+    
+    .reveal.active {
+    opacity: 1;
+    }
+    
+    
+    .active.apparition {
+    animation: fade-bottom $duree ease-in;
+    }
+    
+    @keyframes fade-bottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    }
+}
+
+
+
+/*Animations au scroll*/
+/*Animation fade-right*/
+@mixin fade-right($duree) {
+    .reveal {
+        position: relative;
+        opacity: 0;
+    }
+    
+    .reveal.active {
+    opacity: 1;
+    }
+    
+
+    .active.fade-right {
+    animation: fade-right ($duree) ease-in;
+    }
+    
+    
+    @keyframes fade-right {
+    // 0% {
+    //     transform: translateX(-100%);
+    //     opacity: 1;
+    // }
+    // 40% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 48% {
+    //     transform: translateX(-30%);
+    //     opacity: 1;
+    // }
+    // 55% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 62% {
+    //     transform: translateX(-20%);
+    //     opacity: 1;
+    // }
+    // 68% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 74% {
+    //     transform: translateX(-10%);
+    //     opacity: 1;
+    // }
+    // 79% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 84% {
+    //     transform: translateX(-7%);
+    //     opacity: 1;
+    // }
+    // 88% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 92% {
+    //     transform: translateX(-4%);
+    //     opacity: 1;
+    // }
+    // 95% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 98% {
+    //     transform: translateX(-2%);
+    //     opacity: 1;
+    // }
+    // 100% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+
+
+        0% {
+            transform: translateX(-200%);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateX(-200%);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+
+/*Animation accueil*/
+@mixin accueil-anim($duree) {
+ 
+    .accueil {
+    animation: accueil-anim $duree ease-in;
+
+    }
+    
+    @keyframes accueil-anim {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    }
+}
+
+
+
+
+/*Animation logo*/
+/*Animation accueil*/
+@mixin anim-logo($duree) {
+ 
+    .animation-logo-fitt {
+    animation: anim-logo $duree ease-in-out infinite;
+
+    }
+    
+    @keyframes anim-logo {
+    // 0% {
+    //     rotate:(0deg);
+    // }
+
+    20% {
+        rotate:72deg;
+    }
+
+    30% {
+        filter: invert(39%) sepia(96%) saturate(4046%) hue-rotate(137deg) brightness(99%) contrast(103%);
+    }
+
+    40%{
+        rotate: 144deg;
+    }
+
+    60% {
+        rotate: 216deg;
+        filter: invert(10%) sepia(39%) saturate(1272%) hue-rotate(177deg) brightness(100%) contrast(106%);
+    }
+
+    80% {
+        rotate: 288deg;
+    }
+
+    90%{
+        filter: invert(47%) sepia(47%) saturate(633%) hue-rotate(67deg) brightness(107%) contrast(99%);
+    } 
+
+    100% {
+        rotate: 360deg;
+    }
+    }
+}
+
+
+
+/*Animations au scroll*/
+/*Animation opac-douce-scroll*/
+@mixin scroll-opac($duree) {
+    .reveal {
+        // position: relative;
+        opacity: 0;
+    }
+
+    .reveal.active {
+    opacity: 1;
+    }
+
+    .active.scroll-opac {
+    animation: opac ($duree) ease-in;
+    }
+    
+    @keyframes opac {
+        0% {opacity:0;}
+
+        100% {opacity: 1;}
+    }
+}
+
+
+/*Animations au scroll pour div gain*/
+/*Animation fade-right-gain*/
+@mixin fade-right-gain($duree) {
+    .reveal {
+        position: relative;
+        opacity: 0;
+    }
+    
+    .reveal.active {
+    opacity: 1;
+    }
+    
+
+    .active.fade-right-gain {
+    animation: fade-right-gain ($duree) ease-in;
+    }
+    
+    
+    @keyframes fade-right-gain {
+        0% {
+            transform: translateX(-300%);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateX(-300%);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+
+/*Animations au scroll pour div gain 2*/
+/*Animation opac-douce-scroll*/
+@mixin scroll-opac_2($duree) {
+    .reveal_2 {
+        // position: relative;
+        opacity: 0;
+    }
+
+    .reveal_2.active_2 {
+    opacity: 1;
+    }
+
+    .active_2.scroll-opac_2 {
+    animation: opac_2 ($duree) ease-in;
+    }
+    
+    @keyframes opac_2 {
+        0% {opacity:0;}
+
+        100% {opacity: 1;}
+    }
+}
+
+
+/*Animation logo*/
+/*Animation accueil*/
+@mixin anim-clic($duree) {
+ 
+    .click {
+    animation: anim-clic $duree ease-in-out infinite;
+    }
+    
+    @keyframes anim-clic {
+    // 0% {
+    //     rotate:(0deg);
+    // }
+
+        20% {
+
+        }
+
+        30% {
+            filter: invert(39%) sepia(96%) saturate(4046%) hue-rotate(137deg) brightness(99%) contrast(103%);
+        }
+
+        40%{
+
+        }
+
+        60% {
+            filter: invert(10%) sepia(39%) saturate(1272%) hue-rotate(177deg) brightness(100%) contrast(106%);
+        }
+
+        80% {
+
+        }
+
+        90%{
+            filter: invert(47%) sepia(47%) saturate(633%) hue-rotate(67deg) brightness(107%) contrast(99%);
+        } 
+
+        100% {
+
+        }
+    }
+}

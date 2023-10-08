@@ -1,0 +1,36 @@
+// colors :
+//couleurs primaires (prioritaires !!):
+$bleu : #031837;
+$vert1 : #00a250;
+$vert2 : #3fab35;
+$vert3 : #5bb887;
+
+// couleurs secondaires (encarts, boutons, pictogrammes...)
+$creme : #fffce5;
+$saumon : #f6ab78;
+$violet : #be097f;
+
+
+// couleurs ajoutées :
+$blue-non-photo : #92DCE5;
+
+
+// dégradés :
+$degrade-violet : linear-gradient($violet, #630442);
+$degrade-vert1 : linear-gradient($vert1, #00572b);
+$degrade-vert2 : linear-gradient($vert2, #2a7623);
+$degrade-saumon : linear-gradient($saumon, #ca8060);
+
+
+
+// polices :
+$poppins : 'Poppins', sans-serif;
+
+
+
+//déplacements :
+$right : slide-right;
+$left : slide-left;
+
+$time:1s
+
