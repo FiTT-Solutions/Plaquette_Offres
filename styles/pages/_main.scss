@@ -24,7 +24,8 @@ body {
 /*######## MAIN-CONTAINER #######*/
 /*###############################*/
 .main_container {
-    @include flex-center-column;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     position: relative;
@@ -42,7 +43,7 @@ body {
     align-items: flex-start;
     align-self: flex-start;
     flex-wrap: wrap;
-    margin-right: 100px;
+    // margin-right: 100px;
     
     .header__logo {
         @include flex-center;
