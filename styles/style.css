@@ -596,7 +596,13 @@ body {
 .main_container__top-section .top-section__color-box #h3-3 {
   color: #fffce5;
 }
+.main_container__top-section .top-section__color-box #h3-3 .lien-cpe {
+  color: #fffce5;
+}
 .main_container__top-section .top-section__color-box #h3-4 {
+  color: #fffce5;
+}
+.main_container__top-section .top-section__color-box #h3-4 .lien-cpe {
   color: #fffce5;
 }
 .main_container__top-section .top-section__color-box .fond-explanations, .main_container__top-section .top-section__color-box .fond-explanations .explanations {
